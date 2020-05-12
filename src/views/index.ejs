@@ -1,0 +1,14 @@
+<!-- views/index.ejs -->
+<div class="index">
+	<div class="container">
+		<% if (messages.success) { %>
+		<div class="flash flash-success"><%= messages.success %></div>
+		<% } %>
+
+		<h1>Send an email</h1>
+		<h2>with Node.js, Express.js, MongoDb and Ejs as a template engine</h2>
+		<h3><a href="/contact">Contact Form</a></h3>
+		<h3><a href="/message">Client List</a></h3>
+	</div>
+</div>
+

@@ -1,0 +1,42 @@
+
+<!-- views/contact.ejs -->
+<div class="message">
+
+  <div class="container">
+    <div class="form-header">
+      <h2>Results</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Message</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subscription</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+
+        <% Object.values(messages).forEach(message => { %>
+        <tbody>
+          <tr>
+            <td><%= message.name %></td>
+            <td><%= message.message %></td>
+            <td><%= message.email %></td>
+            <td><%= message.checkNews ? "no" : "yes" %></td>
+            <td><%= message.inserAt.toLocaleString("en-US") %></td>
+          </tr>
+        </tbody>
+
+        <% }) %>
+
+      </table>
+    </div>
+  </div>
+  
+</div>
+<footer>
+  <div class="container">
+    <h3><a href="/">Home</a></h3>
+    <h3><a href="/contact">Contact Form</a></h3>
+  </div>
+</footer>
